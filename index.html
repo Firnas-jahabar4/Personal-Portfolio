@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Firnas M | Portfolio</title>
+  <link rel="icon" href="images/icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Mobile Navbar -->
+  <header class="mobile-nav">
+    <div class="mobile-inner">
+      <a href="#home" class="brand">FIRNAS PORTFOLIO</a>
+      <nav class="mobile-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+<aside class="sidebar">
+  <div class="sidebar-top">
+    <div class="profile-section">
+      <a href="#home" class="logo">FIRNAS</a>
+      <img src="images/pro.jpg" alt="Firnas" class="sidebar-profile">
+    </div>
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+      <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/firnas-jahabar-663607291" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Firnas-jahabar4" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="copy">&copy; 2025 Firnas M</p>
+  </div>
+</aside>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Hero -->
+    <section id="home" class="hero section">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Hello, I'm <span class="accent">Firnas M</span></h1>
+          <p class="lead">Ambitious IT student with interest in frontend development, UI/UX designing, data-driven solutions, and continuous learning.</p>
+          <p class="lead">Pursuing B.Tech in Information Technology, seeking opportunities to apply my knowledge in real-world tech environments.</p>
+        </div>
+        <div class="hero-shot">
+          <img src="images/profile.jpg" alt="Firnas profile">
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="grid">
+        <div class="img-wrap"><img src="images/about.jpg" alt="About"></div>
+        <div class="text">
+          <h2>About Me</h2>
+          <p>I’m Firnas, a student of Information Technology with a passion for building web applications, websites, and exploring innovative tech solutions.
+            
+            From learning to understanding how to solve real-world problems using technology, I continuously strive to grow and contribute meaningfully.I'm a team player with strong adaptability, time management, and a creative mindset.</p>
+          <h3>Education</h3>
+          <p>Currently I'm pursuing B.Tech Information Technology in A.V.C College of Engineering.</p>
+          <h3>Hobbies</h3>
+          <p>My Hobbies are cooking by experiencing new dishes, exploring new adventures and editing videos and photos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section skills">
+      <div class="grid reverse">
+        <div class="text">
+          <h2>Technical & Soft Skills</h2>
+          <ul class="skills-list">
+            <li><i class="fab fa-python"></i> Python</li>
+            <li><i class="fab fa-java"></i> Java (Intermediate)</li>
+            <li><i class="fab fa-html5"></i> HTML/CSS/JS</li>
+            <li><i class="fas fa-tools"></i> VS Code, Git, GitHub, Figma</li>
+            <li><i class="fas fa-users"></i> Teamwork, Adaptability, Time Management</li>
+            <li><i class="fas fa-globe"></i> Languages: Tamil, English</li>
+          </ul>
+        </div>
+        <div class="img-wrap"><img src="images/skill.jpg" alt="Skills"></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects">
+      <div class="grid">
+        <div class="img-wrap"><img src="images/project.jpg" alt="Projects"></div>
+        <div class="text">
+          <h2>Projects</h2>
+          <div class="card">
+            <h3> Smart Trolley with Automated Moving and Billing System</h3>
+            <p>Built a smart shopping trolley using Raspberry Pi, AI, IoT, and sensors for autonomous movement and real-time billing. Enhanced shopping efficiency with automated tracking, obstacle avoidance, and faster checkout.</p>
+          </div>
+          <div class="card">
+            <h3>Enhancing Women's Safety Through Real-time Analytics,Computer Vision,and Proactive Monitoring</h3>
+            <p>Developed an AI-based women’s safety system for real-time detection of risks and SOS gestures. Created a Web-Baseddashboard with live analytics & heat maps for proactive security</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="grid">
+        <div class="text">
+          <h2>Contact Me</h2>
+          <form id="contact-form" novalidate>
+            <input id="name" type="text" placeholder="Your name" required>
+            <input id="email" type="email" placeholder="Your email" required>
+            <input id="subject" type="text" placeholder="Subject" required>
+            <textarea id="message" placeholder="Your message" required></textarea>
+            <button class="btn" type="submit">Send Message</button>
+            <div id="form-alert"></div>
+          </form>
+          <center>
+          <a class="resume" href="resume/RESUME.pdf" download><i class="fas fa-download"></i> Download Resume</a></center>
+        </div>
+        <div class="img-wrap"><img src="images/contact.jpg" alt="Contact"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>FIRNAS M | PORTFOLIO</p>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
