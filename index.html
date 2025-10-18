@@ -182,34 +182,36 @@
         <div class="grid">
           <div class="text">
             <h2>Contact Me</h2>
-            <form id="contact-form" novalidate>
-              <input id="name" type="text" placeholder="Your name" required />
-              <input
-                id="email"
-                type="email"
-                placeholder="Your email"
-                required
-              />
-              <input id="subject" type="text" placeholder="Subject" required />
-              <textarea
-                id="message"
-                placeholder="Your message"
-                required
-              ></textarea>
+      
+            <!-- ✅ Web3Forms Integrated + Success Message -->
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Replace with your Web3Forms access key -->
+              <input type="hidden" name="access_key" value="6f003b4b-d2f5-40a3-aebf-ffadb703dcd1" />
+      
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Your email" required />
+              <input type="text" name="subject" placeholder="Subject" required />
+              <textarea name="message" placeholder="Your message" required></textarea>
+      
               <button class="btn" type="submit">Send Message</button>
-              <div id="form-alert"></div>
             </form>
+      
+            <!-- Success Message -->
+            <p id="form-status" style="margin-top:10px; font-weight:600;"></p>
+      
             <center>
-              <a class="resume" href="resume/RESUME.pdf" download
-                ><i class="fas fa-download"></i> Download Resume</a
-              >
+              <a class="resume" href="resume/RESUME.pdf" download>
+                <i class="fas fa-download"></i> Download Resume
+              </a>
             </center>
           </div>
+      
           <div class="img-wrap">
             <img src="images/contact.jpg" alt="Contact" />
           </div>
         </div>
       </section>
+
 
       <footer class="footer">
         <p>FIRNAS M | PORTFOLIO</p>
@@ -217,5 +219,30 @@
     </main>
 
     <script src="js/script.js"></script>
+    <script>
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+    
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        status.textContent = "Sending...";
+    
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+    
+        if (response.ok) {
+          status.style.color = "green";
+          status.textContent = "Message sent successfully ✅";
+          form.reset();
+        } else {
+          status.style.color = "red";
+          status.textContent = "Oops! Something went wrong ❌";
+        }
+      });
+    </script>
   </body>
 </html>
