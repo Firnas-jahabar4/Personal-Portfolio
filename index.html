@@ -182,29 +182,23 @@
         <div class="grid">
           <div class="text">
             <h2>Contact Me</h2>
-            <form id="contact-form" novalidate>
-              <input id="name" type="text" placeholder="Your name" required />
-              <input
-                id="email"
-                type="email"
-                placeholder="Your email"
-                required
-              />
-              <input id="subject" type="text" placeholder="Subject" required />
-              <textarea
-                id="message"
-                placeholder="Your message"
-                required
-              ></textarea>
+      
+            <!-- Netlify form integration -->
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Your email" required />
+              <input type="text" name="subject" placeholder="Subject" required />
+              <textarea name="message" placeholder="Your message" required></textarea>
               <button class="btn" type="submit">Send Message</button>
-              <div id="form-alert"></div>
             </form>
+      
             <center>
-              <a class="resume" href="resume/RESUME.pdf" download
-                ><i class="fas fa-download"></i> Download Resume</a
-              >
+              <a class="resume" href="resume/RESUME.pdf" download>
+                <i class="fas fa-download"></i> Download Resume
+              </a>
             </center>
           </div>
+      
           <div class="img-wrap">
             <img src="images/contact.jpg" alt="Contact" />
           </div>
